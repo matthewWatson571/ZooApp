@@ -7,12 +7,19 @@ import java.util.Scanner;
 public class Zoo {
     Scanner s = new Scanner(System.in);
     public static ArrayList<Animal> animalList = new ArrayList();
+    public static ArrayList<Employee> employeeList= new ArrayList<>();
+    public static ArrayList<Visitor> visitorList= new ArrayList<>();
+    public static ArrayList<Bird> birdList= new ArrayList<>();
+    public static ArrayList<Mammal> mammalList= new ArrayList<>();
+    public static ArrayList<Fish> fishList= new ArrayList<>();
+
+
     public static ArrayList<Person> peopleList = new ArrayList();
 
-    public void newPerson(){
+    public void newPerson(){//Change to visitor
         String name, email;
         int age;
-        System.out.println("Would you like to add a new person?");
+        System.out.println("Would you like to add a new Visitor?");
         String response = s.nextLine();
         while (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("yes")){
             System.out.println("Name: ");
@@ -32,7 +39,7 @@ public class Zoo {
     public void newEmployee(){
         String name, email;
         int age,idNum;
-        System.out.println("Would you like to add a new person?");
+        System.out.println("Would you like to add a new Employee?");
         String response = s.nextLine();
         while (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("yes")){
             System.out.println("Name: ");
@@ -46,12 +53,13 @@ public class Zoo {
             idNum=s.nextInt();
             Employee newPerson = new Employee(name,age,email,idNum);
             Zoo.peopleList.add(newPerson);
+            Zoo.employeeList.add(newPerson);
             System.out.println("You added " + name + " to the list");
             System.out.println("Would you like to add another person?");
             response = s.nextLine();
         }
     }
-    public void newAnimal(){
+    public void newAnimal(){ //don't need this one
         String name, type;
         int age;
         System.out.println("Would you like to add a new animal?");
@@ -79,6 +87,6 @@ public class Zoo {
 
     }
     public void newMammal(){
-        
+//switch for isHibernating
     }
 }

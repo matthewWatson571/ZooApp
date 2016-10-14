@@ -4,29 +4,17 @@
 public class Animal {
     String name, type;
     int age;
-  //Mammal,Bird,Fish
+    //Mammal,Bird,Fish
 
-    public Animal(String n, int a, String t){
-        name=n;
-        age=a;
-        type=t;
+    public Animal(String n, int a, String t) {
+        name = n;
+        age = a;
+        type = t;
     }
 
-    public String displayAnimalInfo(){
+    public String displayAnimalInfo() {
 
         return "Name: " + name + "\n" + "Age: " + age + "\n" + "Type: " + type + "\n";
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getType() {
-        return type;
     }
 }
 

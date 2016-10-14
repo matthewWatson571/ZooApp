@@ -4,7 +4,6 @@ import java.util.Scanner;
  * Created by Matthew.Watson on 10/13/16.
  */
 public class Employee extends Person {
-
     Scanner s = new Scanner(System.in);
     int idNum;
 
@@ -15,7 +14,7 @@ public class Employee extends Person {
 
     public String displayInfo(){
     String employeeInfo = super.displayPersonInfo();
-    return employeeInfo + "ID number: ";
+    return employeeInfo + "ID number: " + idNum;
     }
 
 }

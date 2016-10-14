@@ -5,6 +5,6 @@ public class Visitor extends Person {
     public Visitor(String n, int a, String e) {
         super(n, a, e);
     }
-
+//Add vistor property
 
 }
